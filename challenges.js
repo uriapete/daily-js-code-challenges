@@ -35,7 +35,7 @@ addOne(-5) //=> -4
 // Your solution for 01-addOne here:
 
 function addOne(num) {return num+=1;}
-console.log (addOne(-5));
+// console.log (addOne(-5));
 
 /*-----------------------------------------------------------------
 Challenge: 02-addTwoNumbers
@@ -85,9 +85,17 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
-
-
+// param should be nums[], not ...num
+// iterate through nums and add to sum
+//let's try to use reduce this time!
+function sumNumbers(nums) {
+  // let testarr = [];
+  return nums.reduce((sum, num) => sum+num,0);
+} 
+// console.log(sumNumbers([10])) //=> 10
+// console.log(sumNumbers([5, 10])) //=> 15
+// console.log(sumNumbers([2, 10, -5])) //=> 7
+// console.log(sumNumbers([])) //=> 0
 
 /*-----------------------------------------------------------------
 Challenge: 04-addList
