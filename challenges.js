@@ -144,7 +144,19 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
+function computeRemainder(dividend, divisor) {
+  // console.log("d/d", dividend/divisor);
+  // console.log("floor d/d:", Math.floor(dividend/divisor));
+  // console.log("d/d-floor d/d", (dividend/divisor)-Math.floor(dividend/divisor));
+  if (divisor === 0) return Infinity;
+  // if divisor is not 0, take the decimal remainder (ex 6/4 = 1.5, take .5) and times that by the divisor, eliminate unneccessary decimals and return that
+  return parseFloat((((dividend/divisor)-Math.floor(dividend/divisor))*divisor).toPrecision(10));
+}
 
+// console.log(computeRemainder(10,2));
+// console.log(computeRemainder(4, 0));
+// console.log(computeRemainder(10, 3));
+// console.log(computeRemainder(10.5, 3));
 
 /*-----------------------------------------------------------------
 Challenge: 06-range
