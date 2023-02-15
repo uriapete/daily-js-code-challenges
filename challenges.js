@@ -116,9 +116,13 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
-
-
+function addList(...nums) {
+  let sum = 0;
+  for (const num of nums) {
+    sum+=num;
+  }
+  return sum;
+}
 
 /*-----------------------------------------------------------------
 Challenge: 05-computeRemainder
@@ -139,8 +143,6 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
-
-
 
 
 
