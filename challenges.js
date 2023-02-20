@@ -195,7 +195,7 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse orderand converts all characters to uppercase.
+- Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse order and converts all characters to uppercase.
 
 Examples:
 
@@ -203,9 +203,22 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
+function reverseUpcaseString(phrase) {
+  phrase=phrase.toUpperCase()
+  let reversePhrase ='';
+  for (let i = phrase.length-1; i >= 0; i--) {
+    const letter = phrase[i];
+    reversePhrase+=letter;
+  }
+  return reversePhrase;
+}
 
+// let t00 = "owo";
+// t00.to
+// console.log(t00[1]);
 
-
+// console.log(reverseUpcaseString("wha"));
+// console.log(reverseUpcaseString("SEI Rocks!"));
 
 /*-----------------------------------------------------------------
 Challenge: 08-removeEnds
@@ -224,9 +237,23 @@ removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
+function removeEnds(strArg = "") {
+  if (strArg.length<3){return ""}
+  else {
+    let str = strArg;
+    str = str.slice(1, str.length-1);
+    // strArg[0] = "";
+    return str;
+  }
+}
 
+// let test = "owO";
+// console.log(test[2]);
+// test[2] = "u";
+// console.log(test[2]);
 
-
+// console.log(removeEnds('SEI Rocks!'));
+// console.log(removeEnds('a'));
 
 /*-----------------------------------------------------------------
 Challenge: 09-charCount
